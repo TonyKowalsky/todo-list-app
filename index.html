@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>To-Do List</title>
+        <script src="src/js/main.js" type="module"></script>
+        <link rel="stylesheet" href="src/css/styles.css"/>
+    </head>
+    <body>
+        <header class="top-half">
+            <img alt="Yeahub logo" src="src/images/Yeahub_logo_bright.jpg" width="100px" height="100px">
+            <h1>YeaPlanner</h1>
+        </header>
+        <main class="bottom-half">
+            <div class="todo-container">
+                <form class="todo-form">
+                    <div class="form-input">
+                        <input type="text" class="todo-input" id="todo-name" placeholder="Add new task" required />
+                        <button type="submit">Add task</button>
+                    </div>
+                </form>
+            </div>
+            <div class="selector">
+                <span>Show</span>
+                <select name="task-type">
+                    <option>All tasks</option>
+                    <option>Completed tasks</option>
+                    <option>Tasks in progress</option>
+                </select>
+            </div>
+            <div class="tasks-count">
+                <span class="total">Total tasks</span>
+                <span class="completed">Completed tasks</span>
+            </div>
+            <ul class="task-list"></ul>
+            <div class="no-tasks">
+                <img alt="No tasks logo" src="src/images/Tasks.svg" width="80px" height="80px">
+                <span>Currently you have no tasks available.</span>
+                <span>Please, add new tasks to your YeaPlanner.</span>
+            </div>
+        </main>
+    </body>
+</html>
