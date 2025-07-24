@@ -1,6 +1,7 @@
 # YeaPlanner
 
 A simple, lightweight TODO list web application YeaPlanner built with plain JavaScript, HTML, and CSS.
+YeaPlanner is available at https://tonykowalsky.github.io/todo-list-app/
 
 ## Description
 
