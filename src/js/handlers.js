@@ -3,6 +3,8 @@ import { saveTasks } from "./storage.js";
 import { renderTasks } from "./render.js";
 import { createTask } from "./utils.js";
 
+const input = document.querySelector('.todo-input');
+
 /**
  * Handles click events on the tasks list, managing task completion toggling and deletion.
  *
@@ -42,7 +44,6 @@ export function tasksListHandler(e) {
  * @param {Event} e - The submit event object.
  */
 export function formHandler(e) {
-    const input = document.querySelector('.todo-input');
     e.preventDefault();
     if (!input.value.trim().length) {
         alert ('Empty tasks are not allowed!');

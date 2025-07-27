@@ -1,6 +1,10 @@
 import { state } from "./state.js";
 import { escapeHTML } from "./utils.js";
 
+const totalTasksCountElement = document.querySelector('span.total');
+const completedTasksCountElement = document.querySelector('span.completed');
+const input = document.querySelector('.todo-input');
+const tasksList = document.querySelector('.task-list');
 
 /**
  * Renders the count of total and completed tasks in the DOM.
@@ -11,8 +15,6 @@ import { escapeHTML } from "./utils.js";
  * @param {Array<Object>} tasks - Array of task objects. Each task should have a boolean `completed` property.
  */
 export function renderTasksCount(tasks) {
-    const totalTasksCountElement = document.querySelector('span.total');
-    const completedTasksCountElement = document.querySelector('span.completed');
     const totalTasksCount = tasks.length;
     const completedTasksCount = tasks.filter(({ completed }) => completed).length;
     totalTasksCountElement.innerHTML = `<span>Total tasks: ${totalTasksCount}</span>`;
@@ -79,8 +81,6 @@ export function renderTask(task) {
  * renderTasks();
  */
 export function renderTasks() {
-    const input = document.querySelector('.todo-input');
-    const tasksList = document.querySelector('.task-list');
     let tasksToRender;
     switch (state.showState) {
         case 'Completed tasks':
