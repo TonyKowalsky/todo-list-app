@@ -5,6 +5,7 @@ const totalTasksCountElement = document.querySelector('span.total');
 const completedTasksCountElement = document.querySelector('span.completed');
 const input = document.querySelector('.todo-input');
 const tasksList = document.querySelector('.task-list');
+const noTasksSign = document.querySelector('.no-tasks');
 
 /**
  * Renders the count of total and completed tasks in the DOM.
@@ -32,7 +33,6 @@ export function renderTasksCount(tasks) {
  * @param {Array<Object>} tasks - Array of task objects.
  */
 export function renderNoTasksSign(tasks) {
-    const noTasksSign = document.querySelector('.no-tasks');
     if (tasks.length === 0) {
         noTasksSign.classList.remove('invisible');
     } else {
